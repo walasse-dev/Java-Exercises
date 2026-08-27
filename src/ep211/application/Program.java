@@ -3,13 +3,11 @@ package ep211.application;
 import ep211.entities.Employee;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Program {
     public static void main(String[] args) {
@@ -25,7 +23,7 @@ public class Program {
                 line = br.readLine();
             }
 
-            Comparator<String> comparator = (x, y) -> x.toUpperCase().compareTo(y.toUpperCase());
+            Comparator<String> comparator = Comparator.comparing(String::toUpperCase);
 
             System.out.println("Email of people whose salary is more than 2000.00:");
             employees.stream()
