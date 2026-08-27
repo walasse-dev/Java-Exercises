@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class Program {
     public static void main(String[] args) {
-        String path = "src/ep195/input.txt";
+        String path = "src/ep195/input.csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))){
             Set<LogEntry> logs = new HashSet<>();
